@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{924ED703-4A7A-4F11-B8EF-E8C8C5A54925}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NPlot</RootNamespace>
+    <AssemblyName>NPlot</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunWithWarnings>false</RunWithWarnings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunWithWarnings>false</RunWithWarnings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AdapterUtils.cs" />
+    <Compile Include="ArrowItem.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="AxesConstraint.cs" />
+    <Compile Include="Axis.cs" />
+    <Compile Include="BarPlot.cs" />
+    <Compile Include="BasePlot.cs" />
+    <Compile Include="BaseSequencePlot.cs" />
+    <Compile Include="Bitmap.PlotSurface2D.cs" />
+    <Compile Include="CandlePlot.cs" />
+    <Compile Include="DateTimeAxis.cs" />
+    <Compile Include="FilledRegion.cs" />
+    <Compile Include="Grid.cs" />
+    <Compile Include="HistogramPlot.cs" />
+    <Compile Include="HorizontalLine.cs" />
+    <Compile Include="IDrawable.cs" />
+    <Compile Include="IGradient.cs" />
+    <Compile Include="ImagePlot.cs" />
+    <Compile Include="IPlot.cs" />
+    <Compile Include="IPlotSurface2D.cs" />
+    <Compile Include="ISequencePlot.cs" />
+    <Compile Include="ITransform2D.cs" />
+    <Compile Include="LabelAxis.cs" />
+    <Compile Include="LabelPointPlot.cs" />
+    <Compile Include="Legend.cs" />
+    <Compile Include="LegendBase.cs" />
+    <Compile Include="LinearAxis.cs" />
+    <Compile Include="LinearGradient.cs" />
+    <Compile Include="LinePlot.cs" />
+    <Compile Include="LogAxis.cs" />
+    <Compile Include="Marker.cs" />
+    <Compile Include="MarkerItem.cs" />
+    <Compile Include="NPlotException.cs" />
+    <Compile Include="PageAlignedPhysicalAxis.cs" />
+    <Compile Include="PhysicalAxis.cs" />
+    <Compile Include="PiAxis.cs" />
+    <Compile Include="PlotSurface2D.cs" />
+    <Compile Include="PointD.cs" />
+    <Compile Include="PointPlot.cs" />
+    <Compile Include="RectangleBrushes.cs" />
+    <Compile Include="RectangleD.cs" />
+    <Compile Include="SequenceAdapter.cs" />
+    <Compile Include="StartStep.cs" />
+    <Compile Include="StepGradient.cs" />
+    <Compile Include="StepPlot.cs" />
+    <Compile Include="TextItem.cs" />
+    <Compile Include="TradingDateTimeAxis.cs" />
+    <Compile Include="Transform2D.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="VerticalLine.cs" />
+    <Compile Include="AxisPosition.cs" />
+    <Compile Include="CursorType.cs" />
+    <Compile Include="FontScaler.cs" />
+    <Compile Include="Modifier.cs" />
+    <Compile Include="PiePlot.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Design" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

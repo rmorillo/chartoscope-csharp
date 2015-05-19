@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F58D59B1-9DAB-4FDF-AAC4-D1DF0D9CCAA3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Chartoscope.Builtin.Probes</RootNamespace>
+    <AssemblyName>Chartoscope.Builtin.Probes</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="IndicatorProbeFactory.cs" />
+    <Compile Include="SensorProbeFactory.cs" />
+    <Compile Include="Indicators\MACD\MACD.cs" />
+    <Compile Include="Indicators\MACD\IMACDField.cs" />
+    <Compile Include="Indicators\MACD\MACDField.cs" />
+    <Compile Include="Indicators\MovingSum\MovingSumOfPrices.cs" />
+    <Compile Include="Indicators\MovingSum\MovingSumOfNumbers.cs" />
+    <Compile Include="Indicators\EMA\EMAOfPrices.cs" />
+    <Compile Include="Indicators\EMA\EMAOfNumbers.cs" />
+    <Compile Include="Indicators\SMA\SMAOfPrices.cs" />
+    <Compile Include="Indicators\SMA\SMAOfNumbers.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Indicators\MACD\" />
+    <Folder Include="Indicators\EMA\" />
+    <Folder Include="Indicators\MovingSum\" />
+    <Folder Include="Indicators\SMA\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Analyser\Chartoscope.Analyser.csproj">
+      <Project>{4221FBC0-5B8D-4362-B205-2BE1E7033F1E}</Project>
+      <Name>Chartoscope.Analyser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Chartoscope.Common.csproj">
+      <Project>{E453CCDA-567A-4D9D-9D90-B22474FA0986}</Project>
+      <Name>Chartoscope.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

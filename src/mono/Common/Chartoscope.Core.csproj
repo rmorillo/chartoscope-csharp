@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B45ADD2C-F6C1-4F3C-BF07-F185DF04B5C1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Chartoscope.Core</RootNamespace>
+    <AssemblyName>Chartoscope.Core</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="LookbackArray.cs" />
+    <Compile Include="ILookbackReader.cs" />
+    <Compile Include="IPriceBar.cs" />
+    <Compile Include="TimeframeOption.cs" />
+    <Compile Include="Messaging\AsyncSocketClient.cs" />
+    <Compile Include="Messaging\AsyncSocketListener.cs" />
+    <Compile Include="Messaging\SocketPub.cs" />
+    <Compile Include="Messaging\Publisher.cs" />
+    <Compile Include="Messaging\Session.cs" />
+    <Compile Include="Messaging\Topic.cs" />
+    <Compile Include="Messaging\Subscriber.cs" />
+    <Compile Include="Messaging\PubConnection.cs" />
+    <Compile Include="Messaging\TopicCollection.cs" />
+    <Compile Include="Messaging\PubSessionCollection.cs" />
+    <Compile Include="Messaging\PubSession.cs" />
+    <Compile Include="Messaging\SubSession.cs" />
+    <Compile Include="Messaging\ITcpPubServer.cs" />
+    <Compile Include="Messaging\TcpPubServer.cs" />
+    <Compile Include="Messaging\ITcpSubClient.cs" />
+    <Compile Include="Messaging\ShortMessageBuffer.cs" />
+    <Compile Include="Messaging\IPubSocket.cs" />
+    <Compile Include="Messaging\MessagingDelegates.cs" />
+    <Compile Include="Messaging\MessageEncoding.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Messaging\" />
+  </ItemGroup>
+</Project>

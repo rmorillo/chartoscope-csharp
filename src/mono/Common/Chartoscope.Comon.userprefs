@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Messaging/IPubSocket.cs">
+    <Files>
+      <File FileName="Messaging/AsyncSocketClient.cs" Line="8" Column="27" />
+      <File FileName="AsyncSocketClient.cs" Line="8" Column="25" />
+      <File FileName="Publisher.cs" Line="7" Column="22" />
+      <File FileName="Session.cs" Line="6" Column="22" />
+      <File FileName="ITickPriceBar.cs" Line="3" Column="11" />
+      <File FileName="Messaging/AsyncSocketListener.cs" Line="7" Column="29" />
+      <File FileName="Messaging/IPubSocket.cs" Line="10" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

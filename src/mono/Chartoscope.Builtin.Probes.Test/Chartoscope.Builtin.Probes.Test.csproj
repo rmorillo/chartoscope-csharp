@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC012B63-363A-4916-9885-359F3B70A0AF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Chartoscope.Builtin.Probes.Test</RootNamespace>
+    <AssemblyName>Chartoscope.Builtin.Probes.Test</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="nunit.core, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <Package>mono-nunit</Package>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <Package>mono-nunit</Package>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="MovingSumTests.cs" />
+    <Compile Include="SMATests.cs" />
+    <Compile Include="EMATests.cs" />
+    <Compile Include="MACDTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Probes\Chartoscope.Builtin.Probes.csproj">
+      <Project>{F58D59B1-9DAB-4FDF-AAC4-D1DF0D9CCAA3}</Project>
+      <Name>Chartoscope.Builtin.Probes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Chartoscope.Common.csproj">
+      <Project>{E453CCDA-567A-4D9D-9D90-B22474FA0986}</Project>
+      <Name>Chartoscope.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Analyser\Chartoscope.Analyser.csproj">
+      <Project>{4221FBC0-5B8D-4362-B205-2BE1E7033F1E}</Project>
+      <Name>Chartoscope.Analyser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chartoscope.Test.Feeds\Chartoscope.Test.Feeds.csproj">
+      <Project>{34DBD1F2-F43C-4CAF-9E8E-49CB277721C2}</Project>
+      <Name>Chartoscope.Test.Feeds</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E72CC750-EAD0-441B-AAD3-47B0ED21D0DD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Chartoscope.Feeder</RootNamespace>
+    <AssemblyName>Chartoscope.Feeder</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="CustomFeeder.cs" />
+    <Compile Include="FeederDelegates.cs" />
+    <Compile Include="FeederFactory.cs" />
+    <Compile Include="FileFeeder.cs" />
+    <Compile Include="IManualFeeder.cs" />
+    <Compile Include="IMockFeeder.cs" />
+    <Compile Include="IPriceBarFeed.cs" />
+    <Compile Include="IQuoteFeed.cs" />
+    <Compile Include="IRemoteFeeder.cs" />
+    <Compile Include="ManualFeeder.cs" />
+    <Compile Include="MockFeeder.cs" />
+    <Compile Include="RemoteFeeder.cs" />
+    <Compile Include="IBackfill.cs" />
+    <Compile Include="Stopwatch.cs" />
+    <Compile Include="IBlackBox.cs" />
+    <Compile Include="IFeedProvider.cs" />
+    <Compile Include="FeedProviderBase.cs" />
+  </ItemGroup>
+</Project>

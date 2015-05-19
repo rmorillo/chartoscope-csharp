@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stetic-interface>
+  <configuration>
+    <images-root-path>..</images-root-path>
+    <target-gtk-version>2.12</target-gtk-version>
+  </configuration>
+  <import>
+    <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <widget-library name="../bin/Debug/Chartoscope.Widgets.dll" internal="true" />
+  </import>
+  <widget class="Gtk.Bin" id="Chartoscope.Widgets.MultiChart" design-size="858 449">
+    <property name="MemberName" />
+    <property name="Visible">False</property>
+    <child>
+      <widget class="Gtk.Table" id="table1">
+        <property name="MemberName" />
+        <property name="NRows">3</property>
+        <property name="RowSpacing">6</property>
+        <property name="ColumnSpacing">6</property>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <widget class="Gtk.DrawingArea" id="priceActionDrawingArea">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="AutoSize">True</property>
+            <property name="XExpand">True</property>
+            <property name="XFill">True</property>
+            <property name="XShrink">False</property>
+            <property name="YExpand">True</property>
+            <property name="YFill">True</property>
+            <property name="YShrink">False</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="Gtk.Bin" id="Chartoscope.Widgets.PriceActionChart" design-size="300 300">
+    <property name="MemberName" />
+    <property name="Visible">False</property>
+    <signal name="ExposeEvent" handler="OnExposeEvent" />
+    <child>
+      <placeholder />
+    </child>
+  </widget>
+</stetic-interface>

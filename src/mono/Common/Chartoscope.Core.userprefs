@@ -1,0 +1,55 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Messaging/Publisher.cs">
+    <Files>
+      <File FileName="../../../chartoscope-core/ITickPriceBar.cs" Line="9" Column="2" />
+      <File FileName="../../../chartoscope-core/AsyncSocketListener.cs" Line="91" Column="24" />
+      <File FileName="../../../chartoscope-core/AsyncSocketClient.cs" Line="162" Column="33" />
+      <File FileName="../../../chartoscope-core/Publisher.cs" Line="16" Column="4" />
+      <File FileName="LookbackArray.cs" Line="77" Column="18" />
+      <File FileName="ILookbackReader.cs" Line="8" Column="3" />
+      <File FileName="IPriceBar.cs" Line="11" Column="13" />
+      <File FileName="ITickPriceBar.cs" Line="9" Column="2" />
+      <File FileName="TimeframeOption.cs" Line="23" Column="6" />
+      <File FileName="AsyncSocketListener.cs" Line="91" Column="24" />
+      <File FileName="AsyncSocketClient.cs" Line="162" Column="33" />
+      <File FileName="Publisher.cs" Line="16" Column="4" />
+      <File FileName="Messaging/Publisher.cs" Line="10" Column="38" />
+      <File FileName="Messaging/SocketPub.cs" Line="36" Column="1" />
+      <File FileName="Messaging/TopicCollection.cs" Line="21" Column="32" />
+      <File FileName="Messaging/PubSessionCollection.cs" Line="2" Column="34" />
+      <File FileName="Messaging/PubSession.cs" Line="1" Column="1" />
+      <File FileName="Messaging/Subscriber.cs" Line="19" Column="22" />
+      <File FileName="Messaging/SubSession.cs" Line="9" Column="19" />
+      <File FileName="Messaging/Topic.cs" Line="22" Column="37" />
+      <File FileName="Messaging/ITcpPubServer.cs" Line="12" Column="1" />
+      <File FileName="Messaging/TcpPubServer.cs" Line="17" Column="20" />
+      <File FileName="Messaging/ITcpSubClient.cs" Line="8" Column="9" />
+      <File FileName="Messaging/ShortMessageBuffer.cs" Line="13" Column="33" />
+      <File FileName="Messaging/Session.cs" Line="7" Column="3" />
+      <File FileName="Messaging/IPubSocket.cs" Line="6" Column="3" />
+      <File FileName="Messaging/PubConnection.cs" Line="8" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Chartoscope.Core" expanded="True">
+            <Node name="Messaging" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/home/ronaldo/Workspace/MonoDevelop/Chartoscope/Chartoscope.Core/Messaging/Topic.cs" line="20" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

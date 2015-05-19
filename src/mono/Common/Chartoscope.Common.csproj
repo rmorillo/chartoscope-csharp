@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E453CCDA-567A-4D9D-9D90-B22474FA0986}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Chartoscope.Common</RootNamespace>
+    <AssemblyName>Chartoscope.Common</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="Messaging\MessageEncoding.cs" />
+    <Compile Include="Messaging\MessagingDelegates.cs" />
+    <Compile Include="Messaging\PubConnection.cs" />
+    <Compile Include="Messaging\PubSession.cs" />
+    <Compile Include="Messaging\PubSessionCollection.cs" />
+    <Compile Include="Messaging\Publisher.cs" />
+    <Compile Include="Messaging\Session.cs" />
+    <Compile Include="Messaging\ShortMessageBuffer.cs" />
+    <Compile Include="Messaging\SubSession.cs" />
+    <Compile Include="Messaging\Subscriber.cs" />
+    <Compile Include="Messaging\Topic.cs" />
+    <Compile Include="Messaging\TopicCollection.cs" />
+    <Compile Include="Messaging\IPubServer.cs" />
+    <Compile Include="Messaging\ISubClient.cs" />
+    <Compile Include="Messaging\IPubService.cs" />
+    <Compile Include="Messaging\IInProcSubscriber.cs" />
+    <Compile Include="Messaging\InProcSubscriber.cs" />
+    <Compile Include="PriceBar.cs" />
+    <Compile Include="IPriceBar.cs" />
+    <Compile Include="IntervalTypeOption.cs" />
+    <Compile Include="PriceBarReader.cs" />
+    <Compile Include="PriceBars.cs" />
+    <Compile Include="Bookmark.cs" />
+    <Compile Include="Bookmarks.cs" />
+    <Compile Include="PriceBarValueOption.cs" />
+    <Compile Include="TimeStamper.cs" />
+    <Compile Include="ILookBehindReader.cs" />
+    <Compile Include="LookBehind.cs" />
+    <Compile Include="Helpers\TimeSeriesHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Net" />
+    <Reference Include="MonoDevelop.NUnit, Version=2.6.0.0, Culture=neutral">
+      <Private>False</Private>
+      <Package>monodevelop-core-addins</Package>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MACDSignal.xml" />
+  </ItemGroup>
+</Project>

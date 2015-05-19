@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Chartoscope>
+	<SignalAdvisor className="Chartoscope.Filters.BuiltIn.MACDCrossOverFilter" setupName="MACDCrossOverFilter">						
+		<Alerts>		
+			<Alert className="Chartoscope.Analytics.BuiltIn.MACDSignalLineCrossOver" setupName="MACDSignalLineCrossOver"/>
+		</Alerts>	
+		<Indicators>
+			<Indicator className="Chartoscope.Analytics.Builtin.Indicators" setupName="MACD"/>			
+		</Indicators>	
+	</SignalAdvisor>
+	<Setup>
+		<MACDCrossOverFilter option="Strict"/>
+		<MACDSignalLineCrossOver fastEMA="20" slowEMA="12" signalLine="9"/>		
+		<MACD fastEMA="20" slowEMA="12" signalLine="9"/>
+	</Setup>
+</Chartoscope>

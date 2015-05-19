@@ -1,0 +1,4 @@
+[package]
+name = "chartoscope"
+version = "0.1.0"
+authors = ["Ronaldo <ronaldo.morillo@yahoo.com>"]
