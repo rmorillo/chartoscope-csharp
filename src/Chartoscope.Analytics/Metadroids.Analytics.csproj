@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B82BE33F-FA7E-4185-A527-9D0582B0DE87}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Metadroids.Analytics</RootNamespace>
+    <AssemblyName>Metadroids.Analytics</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Broker\Abstraction\BrokerBase.cs" />
+    <Compile Include="Broker\Abstraction\IBacktestSession.cs" />
+    <Compile Include="Broker\BacktestBroker.cs" />
+    <Compile Include="Broker\BacktestSession.cs" />
+    <Compile Include="Builtin\BollingerBands.cs" />
+    <Compile Include="Builtin\BollingerBandsCore.cs" />
+    <Compile Include="Builtin\SMA.cs" />
+    <Compile Include="Enumerations\BuiltinIndicatorOption.cs" />
+    <Compile Include="Helpers\IndicatorCalculator.cs" />
+    <Compile Include="Helpers\BarItemCalculator.cs" />
+    <Compile Include="Builtin\SMACore.cs" />
+    <Compile Include="Builtin\MovingSumCore.cs" />
+    <Compile Include="Models\BrokerAccount.cs" />
+    <Compile Include="Models\MultiIndicator.cs" />
+    <Compile Include="Models\SingleIndicator.cs" />
+    <Compile Include="Models\PriceAction.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Broker\Abstraction\IBroker.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Droidworks.Common\Droidworks.Common.csproj">
+      <Project>{bd5778ac-a4d7-4d85-a1fa-649660028d41}</Project>
+      <Name>Droidworks.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Droidworks.Persistence\Droidworks.Persistence.csproj">
+      <Project>{0184d4e6-e526-4ffc-8b04-0cfffc86792c}</Project>
+      <Name>Droidworks.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Metadroids.Common\Metadroids.Common.csproj">
+      <Project>{a7b56b8e-0a0a-468d-b1e6-8e9aae6ac488}</Project>
+      <Name>Metadroids.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

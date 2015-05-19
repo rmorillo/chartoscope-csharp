@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{685F13C1-7911-4E66-953B-EBDCED5D6530}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chartoscope.Services</RootNamespace>
+    <AssemblyName>Chartoscope.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="StrategyCharting.cs" />
+    <Compile Include="SignalCharting.cs" />
+    <Compile Include="BackgroundSignal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chartoscope.Brokers\Chartoscope.Brokers.csproj">
+      <Project>{93730a00-12d8-4a2a-bda1-416a234dadaf}</Project>
+      <Name>Chartoscope.Brokers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chartoscope.Caching\Chartoscope.Caching.csproj">
+      <Project>{23481e0d-dbcd-4a91-b395-141c4894fbe4}</Project>
+      <Name>Chartoscope.Caching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chartoscope.Common\Chartoscope.Common.csproj">
+      <Project>{bd5778ac-a4d7-4d85-a1fa-649660028d41}</Project>
+      <Name>Chartoscope.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chartoscope.Indicators\Chartoscope.Indicators.csproj">
+      <Project>{77181665-d1e7-48b6-8c70-1153d3977476}</Project>
+      <Name>Chartoscope.Indicators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chartoscope.Persistence\Chartoscope.Persistence.csproj">
+      <Project>{0184d4e6-e526-4ffc-8b04-0cfffc86792c}</Project>
+      <Name>Chartoscope.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chartoscope.Signals\Chartoscope.Signals.csproj">
+      <Project>{0edd9491-c62d-48ee-9b8c-33f5eeef4b13}</Project>
+      <Name>Chartoscope.Signals</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

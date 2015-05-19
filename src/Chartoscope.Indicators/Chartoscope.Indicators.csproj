@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{77181665-D1E7-48B6-8C70-1153D3977476}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chartoscope.Indicators</RootNamespace>
+    <AssemblyName>Chartoscope.Indicators</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstraction\IDependentCores.cs" />
+    <Compile Include="Abstraction\IParabalicSARFields.cs" />
+    <Compile Include="Builtin\Cycle\CCI.cs" />
+    <Compile Include="Builtin\Momentum\RSI.cs" />
+    <Compile Include="Builtin\Momentum\Stochastics.cs" />
+    <Compile Include="Builtin\Trend\ADX.cs" />
+    <Compile Include="Builtin\Trend\ParabolicSAR.cs" />
+    <Compile Include="Builtin\Volatility\ATR.cs" />
+    <Compile Include="Core\ADXCore.cs" />
+    <Compile Include="Core\ATRCore.cs" />
+    <Compile Include="Core\CCICore.cs" />
+    <Compile Include="Core\DirectionalMovementCore.cs" />
+    <Compile Include="Core\DirectionalMovementIndexCore.cs" />
+    <Compile Include="Core\HighsAndLowsCore.cs" />
+    <Compile Include="Core\IchimokuCloudCore.cs" />
+    <Compile Include="Core\ParabolicSARCore.cs" />
+    <Compile Include="Core\PriceChangeCore.cs" />
+    <Compile Include="Core\RSICore.cs" />
+    <Compile Include="Core\StochasticsCore.cs" />
+    <Compile Include="Core\TPMACore.cs" />
+    <Compile Include="Core\TrueRangeCore.cs" />
+    <Compile Include="Indicator\BuiltinIndicatorBase.cs" />
+    <Compile Include="Indicator\IndicatorBase.cs" />
+    <Compile Include="Builtin\Trend\EMA.cs" />
+    <Compile Include="Builtin\Trend\MACD.cs" />
+    <Compile Include="Builtin\Trend\SMA.cs" />
+    <Compile Include="Builtin\Volatility\BollingerBands.cs" />
+    <Compile Include="Core\BollingerBandsCore.cs" />
+    <Compile Include="Core\EMACore.cs" />
+    <Compile Include="Core\MACDCore.cs" />
+    <Compile Include="Core\SMACore.cs" />
+    <Compile Include="Delegates\IndicatorDelegates.cs" />
+    <Compile Include="Indicator\IndicatorRingBuffer.cs" />
+    <Compile Include="Models\CoreIndicator.cs" />
+    <Compile Include="Models\MultiValueIndicatorItem.cs" />
+    <Compile Include="Models\SessionIndicator.cs" />
+    <Compile Include="Models\SingleValueIndicatorItem.cs" />
+    <Compile Include="Indicator\DateTimeKeyedMultiIndicator.cs" />
+    <Compile Include="Models\SumItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chartoscope.Caching\Chartoscope.Caching.csproj">
+      <Project>{23481e0d-dbcd-4a91-b395-141c4894fbe4}</Project>
+      <Name>Chartoscope.Caching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chartoscope.Common\Chartoscope.Common.csproj">
+      <Project>{bd5778ac-a4d7-4d85-a1fa-649660028d41}</Project>
+      <Name>Chartoscope.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

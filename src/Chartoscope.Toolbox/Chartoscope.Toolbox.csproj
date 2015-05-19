@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CC446A5E-E68C-4EFA-BE16-C8E5EE06F31F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chartoscope.Toolbox</RootNamespace>
+    <AssemblyName>Chartoscope.Toolbox</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstraction\ChartModelBase.cs" />
+    <Compile Include="StrategyChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StrategyChart.Designer.cs">
+      <DependentUpon>StrategyChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delegates\ChartingDelegates.cs" />
+    <Compile Include="Enumeration\ChartScrollDirectionMode.cs" />
+    <Compile Include="Models\CandlestickChart.cs" />
+    <Compile Include="Models\MACDChart.cs" />
+    <Compile Include="Models\PercentageChart.cs" />
+    <Compile Include="Models\PipChart.cs" />
+    <Compile Include="MultiChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MultiChart.Designer.cs">
+      <DependentUpon>MultiChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SignalChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SignalChart.Designer.cs">
+      <DependentUpon>SignalChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TimeNavigator.Designer.cs">
+      <DependentUpon>TimeNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransparentPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TransparentPanel.Designer.cs">
+      <DependentUpon>TransparentPanel.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="StrategyChart.resx">
+      <DependentUpon>StrategyChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiChart.resx">
+      <DependentUpon>MultiChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignalChart.resx">
+      <DependentUpon>SignalChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeNavigator.resx">
+      <DependentUpon>TimeNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransparentPanel.resx">
+      <DependentUpon>TransparentPanel.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chartoscope.Brokers\Chartoscope.Brokers.csproj">
+      <Project>{93730a00-12d8-4a2a-bda1-416a234dadaf}</Project>
+      <Name>Chartoscope.Brokers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chartoscope.Caching\Chartoscope.Caching.csproj">
+      <Project>{23481e0d-dbcd-4a91-b395-141c4894fbe4}</Project>
+      <Name>Chartoscope.Caching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chartoscope.Common\Chartoscope.Common.csproj">
+      <Project>{bd5778ac-a4d7-4d85-a1fa-649660028d41}</Project>
+      <Name>Chartoscope.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chartoscope.Indicators\Chartoscope.Indicators.csproj">
+      <Project>{77181665-d1e7-48b6-8c70-1153d3977476}</Project>
+      <Name>Chartoscope.Indicators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chartoscope.Persistence\Chartoscope.Persistence.csproj">
+      <Project>{0184d4e6-e526-4ffc-8b04-0cfffc86792c}</Project>
+      <Name>Chartoscope.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chartoscope.Signals\Chartoscope.Signals.csproj">
+      <Project>{0edd9491-c62d-48ee-9b8c-33f5eeef4b13}</Project>
+      <Name>Chartoscope.Signals</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\buysignal.png" />
+    <None Include="Resources\change-down-red.png" />
+    <None Include="Resources\change-up-green.png" />
+    <None Include="Resources\breakeven.png" />
+    <None Include="Resources\days-trackbar.gif" />
+    <None Include="Resources\DefaultTheme_16.gif" />
+    <Content Include="Resources\down-slider.gif" />
+    <None Include="Resources\indecisionsignal.png" />
+    <None Include="Resources\sellsignal.png" />
+    <None Include="Resources\months-trackbar.gif" />
+    <Content Include="Resources\up-slider.gif" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

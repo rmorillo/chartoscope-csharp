@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD5778AC-A4D7-4D85-A1FA-649660028D41}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chartoscope.Common</RootNamespace>
+    <AssemblyName>Chartoscope.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstraction\AnalyticsItem.cs" />
+    <Compile Include="Abstraction\IAnalyticsIdentity.cs" />
+    <Compile Include="Abstraction\IBarItemTypeCode.cs" />
+    <Compile Include="Abstraction\IBufferItemKey.cs" />
+    <Compile Include="Abstraction\ICacheAppender.cs" />
+    <Compile Include="Abstraction\ICacheConfigAppender.cs" />
+    <Compile Include="Abstraction\ICacheConfigNavigator.cs" />
+    <Compile Include="Abstraction\ICalculationDependency.cs" />
+    <Compile Include="Abstraction\ICoreIndicator.cs" />
+    <Compile Include="Abstraction\ISignal.cs" />
+    <Compile Include="Abstraction\IStrategy.cs" />
+    <Compile Include="Abstraction\IStrategyChart.cs" />
+    <Compile Include="Abstraction\ITimeKeyedCacheAppender.cs" />
+    <Compile Include="Abstraction\IIndicatorCore.cs" />
+    <Compile Include="Abstraction\IIndicatorItem.cs" />
+    <Compile Include="Abstraction\IOscillatorChart.cs" />
+    <Compile Include="Abstraction\IPercentageChart.cs" />
+    <Compile Include="Abstraction\IPipChart.cs" />
+    <Compile Include="Abstraction\IPriceActionCalculator.cs" />
+    <Compile Include="Abstraction\IPriceActionChart.cs" />
+    <Compile Include="Abstraction\IRingNavigator.cs" />
+    <Compile Include="Abstraction\ISessionIndicator.cs" />
+    <Compile Include="Abstraction\ISignalChart.cs" />
+    <Compile Include="Abstraction\RingBufferBase.cs" />
+    <Compile Include="Attributes\IndicatorIdentity.cs" />
+    <Compile Include="Attributes\IndicatorPlotting.cs" />
+    <Compile Include="Caching\CacheColumn.cs" />
+    <Compile Include="Caching\CacheConfigItem.cs" />
+    <Compile Include="Caching\CacheHeaderInfo.cs" />
+    <Compile Include="Caching\CacheTypeOption.cs" />
+    <Compile Include="Attributes\CacheFileExtension.cs" />
+    <Compile Include="Caching\ICacheReader.cs" />
+    <Compile Include="Caching\ICacheWriter.cs" />
+    <Compile Include="Caching\ISequenceKeyedCacheAppender.cs" />
+    <Compile Include="Enumeration\AnalyticsTypeOption.cs" />
+    <Compile Include="Enumeration\BarItemMode.cs" />
+    <Compile Include="Enumeration\BuiltinIndicatorOption.cs" />
+    <Compile Include="Enumeration\CacheDataTypeOption.cs" />
+    <Compile Include="Enumeration\CachingModeOption.cs" />
+    <Compile Include="Enumeration\ChartRangeOption.cs" />
+    <Compile Include="Enumeration\ChartTypeOption.cs" />
+    <Compile Include="Enumeration\CloseOrderState.cs" />
+    <Compile Include="Enumeration\StrategyState.cs" />
+    <Compile Include="Enumeration\CurrencyOption.cs" />
+    <Compile Include="Enumeration\CurrencyPairOption.cs" />
+    <Compile Include="Enumeration\InstrumentTypeOption.cs" />
+    <Compile Include="Enumeration\MarketOrderState.cs" />
+    <Compile Include="Enumeration\MarketTypeOption.cs" />
+    <Compile Include="Enumeration\PositionMode.cs" />
+    <Compile Include="Enumeration\SessionModeOption.cs" />
+    <Compile Include="Enumeration\SignalState.cs" />
+    <Compile Include="Enumeration\TimeframeMode.cs" />
+    <Compile Include="Enumeration\TimeframeUnitOption.cs" />
+    <Compile Include="Enumeration\TrendDirectionMode.cs" />
+    <Compile Include="ExtensionMethods\BarItemExtension.cs" />
+    <Compile Include="Global\PersistenceDelegates.cs" />
+    <Compile Include="Global\SignalDelegates.cs" />
+    <Compile Include="Global\SpotForex.cs" />
+    <Compile Include="Global\StrategyDelegates.cs" />
+    <Compile Include="Global\Timeframes.cs" />
+    <Compile Include="Helpers\AttributeHelper.cs" />
+    <Compile Include="Helpers\BarItemCalculator.cs" />
+    <Compile Include="Helpers\DebugHelper.cs" />
+    <Compile Include="Helpers\IndicatorCalculator.cs" />
+    <Compile Include="Helpers\LinearMathHelper.cs" />
+    <Compile Include="Helpers\TimeframeHelper.cs" />
+    <Compile Include="Models\BarItem.cs" />
+    <Compile Include="Models\BarItemType.cs" />
+    <Compile Include="Models\CacheRow.cs" />
+    <Compile Include="Models\CalculationDependencyItem.cs" />
+    <Compile Include="Models\ChartIndicatorItem.cs" />
+    <Compile Include="Models\ChartPoint.cs" />
+    <Compile Include="Models\ChartSignalItem.cs" />
+    <Compile Include="Models\ChartStrategyItem.cs" />
+    <Compile Include="Models\MarketOrder.cs" />
+    <Compile Include="Models\TickerType.cs" />
+    <Compile Include="Models\TimeBarItemType.cs" />
+    <Compile Include="PriceAction\DateTimeKeyedPricebars.cs" />
+    <Compile Include="PriceAction\PriceAction.cs" />
+    <Compile Include="PriceAction\PricebarRingBuffer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Indicator\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

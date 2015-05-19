@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chartoscope.Common", "Chartoscope\Chartoscope.Common.csproj", "{A3D2938E-6BC5-4299-AADA-4A05EB2DBEAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chartoscope.Common.Tests", "Chartoscope.Tests\Chartoscope.Common.Tests.csproj", "{80B6BF2F-7806-4C00-974F-EE1F66B0F050}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chartoscope.Forex", "Chartoscope.Forex\Chartoscope.Forex.csproj", "{6E25DE64-92D9-4B63-B705-8C89ADC6870F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chartoscope.Forex.Tests", "Chartoscope.Forex.Tests\Chartoscope.Forex.Tests.csproj", "{698C746F-F821-46CA-93EF-F1BFD6585FFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3D2938E-6BC5-4299-AADA-4A05EB2DBEAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3D2938E-6BC5-4299-AADA-4A05EB2DBEAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3D2938E-6BC5-4299-AADA-4A05EB2DBEAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3D2938E-6BC5-4299-AADA-4A05EB2DBEAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80B6BF2F-7806-4C00-974F-EE1F66B0F050}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80B6BF2F-7806-4C00-974F-EE1F66B0F050}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80B6BF2F-7806-4C00-974F-EE1F66B0F050}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80B6BF2F-7806-4C00-974F-EE1F66B0F050}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E25DE64-92D9-4B63-B705-8C89ADC6870F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E25DE64-92D9-4B63-B705-8C89ADC6870F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E25DE64-92D9-4B63-B705-8C89ADC6870F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E25DE64-92D9-4B63-B705-8C89ADC6870F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{698C746F-F821-46CA-93EF-F1BFD6585FFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{698C746F-F821-46CA-93EF-F1BFD6585FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{698C746F-F821-46CA-93EF-F1BFD6585FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{698C746F-F821-46CA-93EF-F1BFD6585FFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

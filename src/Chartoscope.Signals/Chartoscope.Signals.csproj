@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0EDD9491-C62D-48EE-9B8C-33F5EEEF4B13}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chartoscope.Signals</RootNamespace>
+    <AssemblyName>Chartoscope.Signals</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstraction\SignalBase.cs" />
+    <Compile Include="Basic\PSARStochastic2.cs" />
+    <Compile Include="Basic\WhiteSoldiersBlackCrows.cs" />
+    <Compile Include="ADXPower.cs" />
+    <Compile Include="BollingerTopsAndBottoms.cs" />
+    <Compile Include="ArsalanADXandEMACross.cs" />
+    <Compile Include="ArsalanADXandMACD.cs" />
+    <Compile Include="ArsalanStochasticAndEMA.cs" />
+    <Compile Include="BestOfMACD.cs" />
+    <Compile Include="ADRTrading.cs" />
+    <Compile Include="ThoseFourIndicators.cs" />
+    <Compile Include="EMA63Breakout.cs" />
+    <Compile Include="SimpleSteppingIntoPosition.cs" />
+    <Compile Include="EguduEMAandADX.cs" />
+    <Compile Include="TeodosiMATunnel.cs" />
+    <Compile Include="TeodosiSimpleSystem.cs" />
+    <Compile Include="SimpleBreakoutSystem.cs" />
+    <Compile Include="KeySimplicity.cs" />
+    <Compile Include="Simple5x5System.cs" />
+    <Compile Include="SwingRSIandMACd.cs" />
+    <Compile Include="Simple123Swings.cs" />
+    <Compile Include="EurUsdSimpleSystem.cs" />
+    <Compile Include="SimpleBalancedSystem.cs" />
+    <Compile Include="TradingOffDailyChart.cs" />
+    <Compile Include="TrendLineSimpleTrading.cs" />
+    <Compile Include="FractalGuruStrategy.cs" />
+    <Compile Include="NewYorkBreakout.cs" />
+    <Compile Include="Basic\H4BollingerBandStrategy.cs" />
+    <Compile Include="TrendLineTunnel.cs" />
+    <Compile Include="Basic\MyLineInTheSand.cs" />
+    <Compile Include="Basic\EMABreakthrough.cs" />
+    <Compile Include="Basic\StupidGuySystem.cs" />
+    <Compile Include="Basic\SimpleMACDCrossover.cs" />
+    <Compile Include="Basic\DoubleStochastic.cs" />
+    <Compile Include="Basic\StochasticLinesCrossover.cs" />
+    <Compile Include="Basic\RSIHighLow.cs" />
+    <Compile Include="Basic\FastMovingMACrossover.cs" />
+    <Compile Include="Basic\MA28And100Trading.cs" />
+    <Compile Include="Models\CoreSignal.cs" />
+    <Compile Include="Models\SessionSignal.cs" />
+    <Compile Include="Basic\PSARandADX.cs" />
+    <Compile Include="Basic\PSARandStochastic.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Basic\SlowMovingMACrossover.cs" />
+    <Compile Include="Basic\StochasticHighLow.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chartoscope.Caching\Chartoscope.Caching.csproj">
+      <Project>{23481e0d-dbcd-4a91-b395-141c4894fbe4}</Project>
+      <Name>Chartoscope.Caching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chartoscope.Common\Chartoscope.Common.csproj">
+      <Project>{bd5778ac-a4d7-4d85-a1fa-649660028d41}</Project>
+      <Name>Chartoscope.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chartoscope.Indicators\Chartoscope.Indicators.csproj">
+      <Project>{77181665-d1e7-48b6-8c70-1153d3977476}</Project>
+      <Name>Chartoscope.Indicators</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Delegates\" />
+    <Folder Include="Simple\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
