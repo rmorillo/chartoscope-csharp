@@ -9,6 +9,8 @@ namespace Chartoscope.Common
 		float High { get;  }
 		float Low { get; }
 		float Close { get;  }
+		
+		void Write(d)
 	}
 }
 

@@ -1,0 +1,7 @@
+C:\Users\Ronaldo\Documents\GitHub\Chartoscope\src\ms.net\Chartoscope.Caching\bin\Debug\Chartoscope.Caching.dll
+C:\Users\Ronaldo\Documents\GitHub\Chartoscope\src\ms.net\Chartoscope.Caching\bin\Debug\Chartoscope.Caching.pdb
+C:\Users\Ronaldo\Documents\GitHub\Chartoscope\src\ms.net\Chartoscope.Caching\bin\Debug\Chartoscope.Common.dll
+C:\Users\Ronaldo\Documents\GitHub\Chartoscope\src\ms.net\Chartoscope.Caching\bin\Debug\Chartoscope.Common.pdb
+C:\Users\Ronaldo\Documents\GitHub\Chartoscope\src\ms.net\Chartoscope.Caching\obj\Debug\Chartoscope.Caching.csprojResolveAssemblyReference.cache
+C:\Users\Ronaldo\Documents\GitHub\Chartoscope\src\ms.net\Chartoscope.Caching\obj\Debug\Chartoscope.Caching.dll
+C:\Users\Ronaldo\Documents\GitHub\Chartoscope\src\ms.net\Chartoscope.Caching\obj\Debug\Chartoscope.Caching.pdb

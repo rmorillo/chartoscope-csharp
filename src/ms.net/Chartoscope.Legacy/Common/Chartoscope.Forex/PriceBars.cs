@@ -8,7 +8,7 @@ namespace Chartoscope.Common
 		{
 		}
 		
-		protected override PriceBar CreatePoolItem ()
+		protected override PriceBar nextPoolItem ()
 		{
 			return new PriceBar();
 		}		

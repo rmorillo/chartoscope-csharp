@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Status:</h1>
+<p>
+    <button type="button" class="btn btn-default">
+        <span class="glyphicon glyphicon-ok-circle"></span>
+    </button>
+</p>
+
+<h1>Chat</h1>
+<div class="ui form">
+    <div class="field">
+        <label>Write a message</label>
+        <textarea id="messageText"></textarea>
+    </div>
+    <div class="field">
+        <button id="sendButton" class="ui button">Send</button>
+    </div>
+    <table id="table" class="ui table">
+        <tbody></tbody>
+    </table>
+</div>
+@section scripts {
+    <script src="http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.0.3.js"></script>
+    <script src="/signalr/js"></script>
+    <script>
+        $(function () {
+            var chat = $.connection.chat;
+
+            $("#sendButton").click(function() {
+                var text = $("#messageText").val();
+                chat.server.sendMessage(text).done(function (value) {
+                    console.log("Message sent.");
+                });
+            });
+
+            chat.client.onMessageReceived = function (date, user, message) {
+            	$("#table tbody").append("<tr><td>" + date + "</td><td>" + user + "</td><td>" + message + "</td></tr>");
+            };
+
+            $.connection.hub.start(function () {
+                console.info("Connected.");
+            });
+
+            $.connection.hub.disconnected(function() {
+                setTimeout(function() {
+                    console.info("Reconnecting...");
+                    $.connection.hub.start(function() {
+                        console.info("Connected.");
+                    });
+                }, 5000); // Restart connection after 5 seconds.
+
+                console.info("Reconnecting in 5 sec...");
+            });
+        });
+    </script>
+}
